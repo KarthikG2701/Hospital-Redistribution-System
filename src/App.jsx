@@ -19,8 +19,6 @@ const DashboardLayout = ({ children, onLogout }) => {
     { path: '/forecast', label: 'Shortage Forecast', icon: TrendingUp },
     { path: '/logistics', label: 'Redistribution', icon: Map },
   ];
-  //Hello
-  
 
   return (
     <div className="flex h-screen bg-black text-gray-100 font-mono overflow-hidden">
