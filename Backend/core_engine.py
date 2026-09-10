@@ -9,21 +9,20 @@ hospitals = [
     "St. John's Medical", "Ramaiah Memorial", "Narayana Health", "BGS Gleneagles"
 ]
 
-# Slightly relaxed cold-chain limits to ensure OSRM math allows cross-city routes
+# Re-introduced Cold Chain classifications
 medicines = {
-    "Amoxicillin": {"max_time": 120},
-    "Insulin": {"max_time": 90}, 
-    "O-Negative Blood": {"max_time": 60},
-    "Azithromycin": {"max_time": 120},
-    "Propofol": {"max_time": 60}
+    "Amoxicillin": {"max_time": 120, "type": "Standard"},
+    "Insulin": {"max_time": 90, "type": "Cold Chain"}, 
+    "O-Negative Blood": {"max_time": 60, "type": "Strict Cold Chain"},
+    "Azithromycin": {"max_time": 120, "type": "Standard"},
+    "Propofol": {"max_time": 60, "type": "Strict Cold Chain"}
 }
 
-# Fixed transit matrix to guarantee routes succeed (15 to 45 mins)
-base_osrm = pd.DataFrame(np.random.randint(15, 45, size=(10, 10)), index=hospitals, columns=hospitals)
+# Base times increased slightly (20 to 60 mins) to mathematically force cold-chain rejections
+base_osrm = pd.DataFrame(np.random.randint(20, 60, size=(10, 10)), index=hospitals, columns=hospitals)
 np.fill_diagonal(base_osrm.values, 0)
 
 # 1. Staged Cascade Roles
-# We explicitly define who fails when, and who has the surplus to help
 roles = {
     "Victoria Hospital": {"role": "Ground Zero", "stock": 20, "drain": 35},
     "NIMHANS": {"role": "Vulnerable", "stock": 400, "drain": 25},
@@ -56,26 +55,23 @@ for day in range(15):
     daily_routes = []
     daily_logs = []
 
-    # THE SYSTEMIC SHOCK (Day 4)
     if day == 4:
         daily_logs.append(">> SYS.ALERT: REGIONAL SURGE DETECTED. MASS CASUALTY INCIDENT IN SOUTHERN SECTOR.")
         for h in hospitals:
             if roles[h]["role"] == "Vulnerable":
                 for med in medicines:
-                    system_state[h][med]["drain"] += 55 # Massive spike that will destroy 7-day projections
+                    system_state[h][med]["drain"] += 55 
 
     for h in hospitals:
         hosp_data = {"hospital": h, "inventory": {}}
         for med in medicines:
             if day > 0:
-                # Subtract daily drain
                 actual_drain = int(np.random.normal(system_state[h][med]["drain"], system_state[h][med]["drain"] * 0.1))
                 system_state[h][med]["stock"] = max(0, system_state[h][med]["stock"] - actual_drain)
 
             curr_stock = system_state[h][med]["stock"]
             drain_rate = system_state[h][med]["drain"]
 
-            # 7-day forecast
             forecast = []
             sim_stock = curr_stock
             for i in range(15):
@@ -86,7 +82,6 @@ for day in range(15):
             stock_day_7 = forecast[7]["projected_stock"]
             days_to_stockout = curr_stock // drain_rate if drain_rate > 0 else 99
 
-            # STRICT Visual Thresholds
             if curr_stock <= 50 or stock_day_7 <= 0:
                 status = "Critical Deficit"
             elif curr_stock >= 400 and stock_day_7 >= 200:
@@ -102,7 +97,7 @@ for day in range(15):
             }
         daily_nodes.append(hosp_data)
 
-    # 3. Routing & Replenishment (The Exhaustion Mechanic)
+    # 3. Routing & Replenishment 
     for med, specs in medicines.items():
         deficits = [n for n in daily_nodes if n["inventory"][med]["status"] == "Critical Deficit"]
         surpluses = [n for n in daily_nodes if n["inventory"][med]["status"] == "Surplus"]
@@ -112,15 +107,17 @@ for day in range(15):
             lowest_cost = float('inf')
             
             for donor in surpluses:
-                # Prevent donors from going negative in a single loop
                 if system_state[donor["hospital"]][med]["stock"] < 300:
                     continue
                     
                 base_time = base_osrm.loc[donor["hospital"], target["hospital"]]
-                traffic_multiplier = round(np.random.uniform(1.0, 1.4), 2)
+                traffic_multiplier = round(np.random.uniform(1.0, 1.5), 2)
                 actual_time = int(base_time * traffic_multiplier)
                 
+                # EXPLICIT COLD CHAIN REJECTION LOGGING
                 if actual_time > specs["max_time"]:
+                    if specs["type"] != "Standard":
+                        daily_logs.append(f"[{med}] Route rejected: {donor['hospital']} -> {target['hospital']} ({actual_time}m > {specs['max_time']}m {specs['type']} limit).")
                     continue
                     
                 if actual_time < lowest_cost:
@@ -135,12 +132,10 @@ for day in range(15):
                 daily_routes.append(best_route)
                 daily_logs.append(f"[{med}] Emergency dispatch: {best_route['from']} -> {best_route['to']}.")
                 
-                # Deduct 250 units! This will quickly drain the donors, destroying their "Surplus" status
                 transfer_amt = 250
                 system_state[best_route['from']][med]["stock"] -= transfer_amt
                 system_state[best_route['to']][med]["stock"] += transfer_amt
 
-    # Log the system collapse
     total_deficits = sum(1 for n in daily_nodes for m in medicines if n["inventory"][m]["status"] == "Critical Deficit")
     total_surpluses = sum(1 for n in daily_nodes for m in medicines if n["inventory"][m]["status"] == "Surplus")
     
