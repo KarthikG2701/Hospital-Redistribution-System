@@ -59,6 +59,7 @@
     --chart-5: 340 75% 55%
   }
 
+
   body::after {
   content: "";
   position: fixed;
@@ -68,4 +69,26 @@
   z-index: 100;
   pointer-events: none;
 }
+}
+
+
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border: 1px solid #334155 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+}
+.leaflet-container a.leaflet-popup-close-button {
+  color: #94a3b8 !important;
+}
+.leaflet-container a.leaflet-popup-close-button:hover {
+  color: #f8fafc !important;
+}
+/* OpenStreetMap Dark Mode Inversion Hack */
+.leaflet-layer,
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out,
+.leaflet-control-attribution {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }

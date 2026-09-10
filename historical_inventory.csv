@@ -1,0 +1,301 @@
+date,hospital,supplier,daily_consumption,stock_remaining,supplier_delayed
+2026-08-11,Victoria Hospital,Supplier_A,70,3753,0
+2026-08-12,Victoria Hospital,Supplier_A,96,3657,0
+2026-08-13,Victoria Hospital,Supplier_A,96,3561,0
+2026-08-14,Victoria Hospital,Supplier_A,109,3452,0
+2026-08-15,Victoria Hospital,Supplier_A,80,3372,0
+2026-08-16,Victoria Hospital,Supplier_A,81,3291,0
+2026-08-17,Victoria Hospital,Supplier_A,80,3211,0
+2026-08-18,Victoria Hospital,Supplier_A,74,3137,0
+2026-08-19,Victoria Hospital,Supplier_A,43,3094,0
+2026-08-20,Victoria Hospital,Supplier_A,108,2986,0
+2026-08-21,Victoria Hospital,Supplier_A,105,2881,0
+2026-08-22,Victoria Hospital,Supplier_A,63,2818,0
+2026-08-23,Victoria Hospital,Supplier_A,83,2735,0
+2026-08-24,Victoria Hospital,Supplier_A,77,2658,0
+2026-08-25,Victoria Hospital,Supplier_A,78,2580,0
+2026-08-26,Victoria Hospital,Supplier_A,52,2528,0
+2026-08-27,Victoria Hospital,Supplier_A,79,2449,0
+2026-08-28,Victoria Hospital,Supplier_A,101,2348,0
+2026-08-29,Victoria Hospital,Supplier_A,137,2211,0
+2026-08-30,Victoria Hospital,Supplier_A,98,2113,0
+2026-08-31,Victoria Hospital,Supplier_A,93,2020,0
+2026-09-01,Victoria Hospital,Supplier_A,81,1939,0
+2026-09-02,Victoria Hospital,Supplier_A,80,1859,0
+2026-09-03,Victoria Hospital,Supplier_A,108,1751,0
+2026-09-04,Victoria Hospital,Supplier_A,96,1655,0
+2026-09-05,Victoria Hospital,Supplier_A,79,1576,0
+2026-09-06,Victoria Hospital,Supplier_A,72,1504,0
+2026-09-07,Victoria Hospital,Supplier_A,88,1416,1
+2026-09-08,Victoria Hospital,Supplier_A,81,1335,1
+2026-09-09,Victoria Hospital,Supplier_A,90,1245,1
+2026-08-11,Aster CMI (Hebbal),Supplier_B,83,4565,0
+2026-08-12,Aster CMI (Hebbal),Supplier_B,64,4501,0
+2026-08-13,Aster CMI (Hebbal),Supplier_B,54,4447,0
+2026-08-14,Aster CMI (Hebbal),Supplier_B,69,4378,0
+2026-08-15,Aster CMI (Hebbal),Supplier_B,68,4310,0
+2026-08-16,Aster CMI (Hebbal),Supplier_B,75,4235,0
+2026-08-17,Aster CMI (Hebbal),Supplier_B,72,4163,0
+2026-08-18,Aster CMI (Hebbal),Supplier_B,93,4070,0
+2026-08-19,Aster CMI (Hebbal),Supplier_B,85,3985,0
+2026-08-20,Aster CMI (Hebbal),Supplier_B,72,3913,0
+2026-08-21,Aster CMI (Hebbal),Supplier_B,61,3852,0
+2026-08-22,Aster CMI (Hebbal),Supplier_B,92,3760,0
+2026-08-23,Aster CMI (Hebbal),Supplier_B,86,3674,0
+2026-08-24,Aster CMI (Hebbal),Supplier_B,114,3560,0
+2026-08-25,Aster CMI (Hebbal),Supplier_B,78,3482,0
+2026-08-26,Aster CMI (Hebbal),Supplier_B,99,3383,0
+2026-08-27,Aster CMI (Hebbal),Supplier_B,81,3302,0
+2026-08-28,Aster CMI (Hebbal),Supplier_B,76,3226,0
+2026-08-29,Aster CMI (Hebbal),Supplier_B,52,3174,0
+2026-08-30,Aster CMI (Hebbal),Supplier_B,85,3089,0
+2026-08-31,Aster CMI (Hebbal),Supplier_B,62,3027,0
+2026-09-01,Aster CMI (Hebbal),Supplier_B,67,2960,0
+2026-09-02,Aster CMI (Hebbal),Supplier_B,74,2886,0
+2026-09-03,Aster CMI (Hebbal),Supplier_B,70,2816,0
+2026-09-04,Aster CMI (Hebbal),Supplier_B,51,2765,0
+2026-09-05,Aster CMI (Hebbal),Supplier_B,63,2702,0
+2026-09-06,Aster CMI (Hebbal),Supplier_B,88,2614,0
+2026-09-07,Aster CMI (Hebbal),Supplier_B,85,2529,0
+2026-09-08,Aster CMI (Hebbal),Supplier_B,85,2444,0
+2026-09-09,Aster CMI (Hebbal),Supplier_B,77,2367,0
+2026-08-11,Manipal Hospital (HAL),Supplier_B,65,2295,0
+2026-08-12,Manipal Hospital (HAL),Supplier_B,78,2217,0
+2026-08-13,Manipal Hospital (HAL),Supplier_B,103,2114,0
+2026-08-14,Manipal Hospital (HAL),Supplier_B,62,2052,0
+2026-08-15,Manipal Hospital (HAL),Supplier_B,95,1957,0
+2026-08-16,Manipal Hospital (HAL),Supplier_B,107,1850,0
+2026-08-17,Manipal Hospital (HAL),Supplier_B,87,1763,0
+2026-08-18,Manipal Hospital (HAL),Supplier_B,53,1710,0
+2026-08-19,Manipal Hospital (HAL),Supplier_B,85,1625,0
+2026-08-20,Manipal Hospital (HAL),Supplier_B,78,1547,0
+2026-08-21,Manipal Hospital (HAL),Supplier_B,87,1460,0
+2026-08-22,Manipal Hospital (HAL),Supplier_B,91,1369,0
+2026-08-23,Manipal Hospital (HAL),Supplier_B,67,1302,0
+2026-08-24,Manipal Hospital (HAL),Supplier_B,66,1236,0
+2026-08-25,Manipal Hospital (HAL),Supplier_B,77,1159,0
+2026-08-26,Manipal Hospital (HAL),Supplier_B,64,1095,0
+2026-08-27,Manipal Hospital (HAL),Supplier_B,82,1013,0
+2026-08-28,Manipal Hospital (HAL),Supplier_B,78,935,0
+2026-08-29,Manipal Hospital (HAL),Supplier_B,122,813,0
+2026-08-30,Manipal Hospital (HAL),Supplier_B,63,750,0
+2026-08-31,Manipal Hospital (HAL),Supplier_B,67,683,0
+2026-09-01,Manipal Hospital (HAL),Supplier_B,86,597,0
+2026-09-02,Manipal Hospital (HAL),Supplier_B,93,504,0
+2026-09-03,Manipal Hospital (HAL),Supplier_B,116,388,0
+2026-09-04,Manipal Hospital (HAL),Supplier_B,105,283,0
+2026-09-05,Manipal Hospital (HAL),Supplier_B,93,190,0
+2026-09-06,Manipal Hospital (HAL),Supplier_B,84,106,0
+2026-09-07,Manipal Hospital (HAL),Supplier_B,94,12,0
+2026-09-08,Manipal Hospital (HAL),Supplier_B,70,0,0
+2026-09-09,Manipal Hospital (HAL),Supplier_B,74,0,0
+2026-08-11,Apollo (Jayanagar),Supplier_A,61,3932,0
+2026-08-12,Apollo (Jayanagar),Supplier_A,48,3884,0
+2026-08-13,Apollo (Jayanagar),Supplier_A,62,3822,0
+2026-08-14,Apollo (Jayanagar),Supplier_A,77,3745,0
+2026-08-15,Apollo (Jayanagar),Supplier_A,62,3683,0
+2026-08-16,Apollo (Jayanagar),Supplier_A,55,3628,0
+2026-08-17,Apollo (Jayanagar),Supplier_A,63,3565,0
+2026-08-18,Apollo (Jayanagar),Supplier_A,73,3492,0
+2026-08-19,Apollo (Jayanagar),Supplier_A,48,3444,0
+2026-08-20,Apollo (Jayanagar),Supplier_A,53,3391,0
+2026-08-21,Apollo (Jayanagar),Supplier_A,68,3323,0
+2026-08-22,Apollo (Jayanagar),Supplier_A,50,3273,0
+2026-08-23,Apollo (Jayanagar),Supplier_A,93,3180,0
+2026-08-24,Apollo (Jayanagar),Supplier_A,64,3116,0
+2026-08-25,Apollo (Jayanagar),Supplier_A,54,3062,0
+2026-08-26,Apollo (Jayanagar),Supplier_A,56,3006,0
+2026-08-27,Apollo (Jayanagar),Supplier_A,60,2946,0
+2026-08-28,Apollo (Jayanagar),Supplier_A,59,2887,0
+2026-08-29,Apollo (Jayanagar),Supplier_A,38,2849,0
+2026-08-30,Apollo (Jayanagar),Supplier_A,83,2766,0
+2026-08-31,Apollo (Jayanagar),Supplier_A,66,2700,0
+2026-09-01,Apollo (Jayanagar),Supplier_A,66,2634,0
+2026-09-02,Apollo (Jayanagar),Supplier_A,77,2557,0
+2026-09-03,Apollo (Jayanagar),Supplier_A,52,2505,0
+2026-09-04,Apollo (Jayanagar),Supplier_A,56,2449,0
+2026-09-05,Apollo (Jayanagar),Supplier_A,73,2376,0
+2026-09-06,Apollo (Jayanagar),Supplier_A,66,2310,0
+2026-09-07,Apollo (Jayanagar),Supplier_A,71,2239,1
+2026-09-08,Apollo (Jayanagar),Supplier_A,65,2174,1
+2026-09-09,Apollo (Jayanagar),Supplier_A,63,2111,1
+2026-08-11,Fortis (Bannerghatta),Supplier_C,61,3469,0
+2026-08-12,Fortis (Bannerghatta),Supplier_C,80,3389,0
+2026-08-13,Fortis (Bannerghatta),Supplier_C,80,3309,0
+2026-08-14,Fortis (Bannerghatta),Supplier_C,35,3274,0
+2026-08-15,Fortis (Bannerghatta),Supplier_C,49,3225,0
+2026-08-16,Fortis (Bannerghatta),Supplier_C,59,3166,0
+2026-08-17,Fortis (Bannerghatta),Supplier_C,42,3124,0
+2026-08-18,Fortis (Bannerghatta),Supplier_C,50,3074,0
+2026-08-19,Fortis (Bannerghatta),Supplier_C,56,3018,0
+2026-08-20,Fortis (Bannerghatta),Supplier_C,74,2944,0
+2026-08-21,Fortis (Bannerghatta),Supplier_C,57,2887,0
+2026-08-22,Fortis (Bannerghatta),Supplier_C,60,2827,0
+2026-08-23,Fortis (Bannerghatta),Supplier_C,63,2764,0
+2026-08-24,Fortis (Bannerghatta),Supplier_C,64,2700,0
+2026-08-25,Fortis (Bannerghatta),Supplier_C,58,2642,0
+2026-08-26,Fortis (Bannerghatta),Supplier_C,44,2598,0
+2026-08-27,Fortis (Bannerghatta),Supplier_C,67,2531,0
+2026-08-28,Fortis (Bannerghatta),Supplier_C,63,2468,0
+2026-08-29,Fortis (Bannerghatta),Supplier_C,45,2423,0
+2026-08-30,Fortis (Bannerghatta),Supplier_C,50,2373,0
+2026-08-31,Fortis (Bannerghatta),Supplier_C,68,2305,0
+2026-09-01,Fortis (Bannerghatta),Supplier_C,65,2240,0
+2026-09-02,Fortis (Bannerghatta),Supplier_C,49,2191,0
+2026-09-03,Fortis (Bannerghatta),Supplier_C,54,2137,0
+2026-09-04,Fortis (Bannerghatta),Supplier_C,56,2081,0
+2026-09-05,Fortis (Bannerghatta),Supplier_C,65,2016,0
+2026-09-06,Fortis (Bannerghatta),Supplier_C,72,1944,0
+2026-09-07,Fortis (Bannerghatta),Supplier_C,58,1886,0
+2026-09-08,Fortis (Bannerghatta),Supplier_C,71,1815,0
+2026-09-09,Fortis (Bannerghatta),Supplier_C,68,1747,0
+2026-08-11,NIMHANS,Supplier_A,85,2139,0
+2026-08-12,NIMHANS,Supplier_A,66,2073,0
+2026-08-13,NIMHANS,Supplier_A,54,2019,0
+2026-08-14,NIMHANS,Supplier_A,55,1964,0
+2026-08-15,NIMHANS,Supplier_A,62,1902,0
+2026-08-16,NIMHANS,Supplier_A,66,1836,0
+2026-08-17,NIMHANS,Supplier_A,62,1774,0
+2026-08-18,NIMHANS,Supplier_A,68,1706,0
+2026-08-19,NIMHANS,Supplier_A,60,1646,0
+2026-08-20,NIMHANS,Supplier_A,64,1582,0
+2026-08-21,NIMHANS,Supplier_A,73,1509,0
+2026-08-22,NIMHANS,Supplier_A,48,1461,0
+2026-08-23,NIMHANS,Supplier_A,63,1398,0
+2026-08-24,NIMHANS,Supplier_A,63,1335,0
+2026-08-25,NIMHANS,Supplier_A,73,1262,0
+2026-08-26,NIMHANS,Supplier_A,59,1203,0
+2026-08-27,NIMHANS,Supplier_A,70,1133,0
+2026-08-28,NIMHANS,Supplier_A,75,1058,0
+2026-08-29,NIMHANS,Supplier_A,39,1019,0
+2026-08-30,NIMHANS,Supplier_A,76,943,0
+2026-08-31,NIMHANS,Supplier_A,49,894,0
+2026-09-01,NIMHANS,Supplier_A,48,846,0
+2026-09-02,NIMHANS,Supplier_A,26,820,0
+2026-09-03,NIMHANS,Supplier_A,52,768,0
+2026-09-04,NIMHANS,Supplier_A,61,707,0
+2026-09-05,NIMHANS,Supplier_A,57,650,0
+2026-09-06,NIMHANS,Supplier_A,56,594,0
+2026-09-07,NIMHANS,Supplier_A,48,546,1
+2026-09-08,NIMHANS,Supplier_A,72,474,1
+2026-09-09,NIMHANS,Supplier_A,73,401,1
+2026-08-11,St. John's Medical,Supplier_A,81,3258,0
+2026-08-12,St. John's Medical,Supplier_A,116,3142,0
+2026-08-13,St. John's Medical,Supplier_A,53,3089,0
+2026-08-14,St. John's Medical,Supplier_A,82,3007,0
+2026-08-15,St. John's Medical,Supplier_A,76,2931,0
+2026-08-16,St. John's Medical,Supplier_A,72,2859,0
+2026-08-17,St. John's Medical,Supplier_A,85,2774,0
+2026-08-18,St. John's Medical,Supplier_A,71,2703,0
+2026-08-19,St. John's Medical,Supplier_A,44,2659,0
+2026-08-20,St. John's Medical,Supplier_A,59,2600,0
+2026-08-21,St. John's Medical,Supplier_A,91,2509,0
+2026-08-22,St. John's Medical,Supplier_A,88,2421,0
+2026-08-23,St. John's Medical,Supplier_A,66,2355,0
+2026-08-24,St. John's Medical,Supplier_A,79,2276,0
+2026-08-25,St. John's Medical,Supplier_A,112,2164,0
+2026-08-26,St. John's Medical,Supplier_A,71,2093,0
+2026-08-27,St. John's Medical,Supplier_A,71,2022,0
+2026-08-28,St. John's Medical,Supplier_A,74,1948,0
+2026-08-29,St. John's Medical,Supplier_A,80,1868,0
+2026-08-30,St. John's Medical,Supplier_A,66,1802,0
+2026-08-31,St. John's Medical,Supplier_A,80,1722,0
+2026-09-01,St. John's Medical,Supplier_A,44,1678,0
+2026-09-02,St. John's Medical,Supplier_A,76,1602,0
+2026-09-03,St. John's Medical,Supplier_A,72,1530,0
+2026-09-04,St. John's Medical,Supplier_A,68,1462,0
+2026-09-05,St. John's Medical,Supplier_A,65,1397,0
+2026-09-06,St. John's Medical,Supplier_A,63,1334,0
+2026-09-07,St. John's Medical,Supplier_A,60,1274,1
+2026-09-08,St. John's Medical,Supplier_A,38,1236,1
+2026-09-09,St. John's Medical,Supplier_A,68,1168,1
+2026-08-11,Ramaiah Memorial,Supplier_B,104,3861,0
+2026-08-12,Ramaiah Memorial,Supplier_B,125,3736,0
+2026-08-13,Ramaiah Memorial,Supplier_B,97,3639,0
+2026-08-14,Ramaiah Memorial,Supplier_B,77,3562,0
+2026-08-15,Ramaiah Memorial,Supplier_B,112,3450,0
+2026-08-16,Ramaiah Memorial,Supplier_B,93,3357,0
+2026-08-17,Ramaiah Memorial,Supplier_B,109,3248,0
+2026-08-18,Ramaiah Memorial,Supplier_B,112,3136,0
+2026-08-19,Ramaiah Memorial,Supplier_B,75,3061,0
+2026-08-20,Ramaiah Memorial,Supplier_B,118,2943,0
+2026-08-21,Ramaiah Memorial,Supplier_B,109,2834,0
+2026-08-22,Ramaiah Memorial,Supplier_B,81,2753,0
+2026-08-23,Ramaiah Memorial,Supplier_B,98,2655,0
+2026-08-24,Ramaiah Memorial,Supplier_B,97,2558,0
+2026-08-25,Ramaiah Memorial,Supplier_B,93,2465,0
+2026-08-26,Ramaiah Memorial,Supplier_B,109,2356,0
+2026-08-27,Ramaiah Memorial,Supplier_B,119,2237,0
+2026-08-28,Ramaiah Memorial,Supplier_B,93,2144,0
+2026-08-29,Ramaiah Memorial,Supplier_B,117,2027,0
+2026-08-30,Ramaiah Memorial,Supplier_B,111,1916,0
+2026-08-31,Ramaiah Memorial,Supplier_B,97,1819,0
+2026-09-01,Ramaiah Memorial,Supplier_B,96,1723,0
+2026-09-02,Ramaiah Memorial,Supplier_B,71,1652,0
+2026-09-03,Ramaiah Memorial,Supplier_B,65,1587,0
+2026-09-04,Ramaiah Memorial,Supplier_B,96,1491,0
+2026-09-05,Ramaiah Memorial,Supplier_B,77,1414,0
+2026-09-06,Ramaiah Memorial,Supplier_B,92,1322,0
+2026-09-07,Ramaiah Memorial,Supplier_B,83,1239,0
+2026-09-08,Ramaiah Memorial,Supplier_B,59,1180,0
+2026-09-09,Ramaiah Memorial,Supplier_B,99,1081,0
+2026-08-11,Narayana Health (Bommasandra),Supplier_C,87,3794,0
+2026-08-12,Narayana Health (Bommasandra),Supplier_C,118,3676,0
+2026-08-13,Narayana Health (Bommasandra),Supplier_C,98,3578,0
+2026-08-14,Narayana Health (Bommasandra),Supplier_C,76,3502,0
+2026-08-15,Narayana Health (Bommasandra),Supplier_C,83,3419,0
+2026-08-16,Narayana Health (Bommasandra),Supplier_C,110,3309,0
+2026-08-17,Narayana Health (Bommasandra),Supplier_C,82,3227,0
+2026-08-18,Narayana Health (Bommasandra),Supplier_C,101,3126,0
+2026-08-19,Narayana Health (Bommasandra),Supplier_C,97,3029,0
+2026-08-20,Narayana Health (Bommasandra),Supplier_C,84,2945,0
+2026-08-21,Narayana Health (Bommasandra),Supplier_C,138,2807,0
+2026-08-22,Narayana Health (Bommasandra),Supplier_C,109,2698,0
+2026-08-23,Narayana Health (Bommasandra),Supplier_C,57,2641,0
+2026-08-24,Narayana Health (Bommasandra),Supplier_C,100,2541,0
+2026-08-25,Narayana Health (Bommasandra),Supplier_C,84,2457,0
+2026-08-26,Narayana Health (Bommasandra),Supplier_C,113,2344,0
+2026-08-27,Narayana Health (Bommasandra),Supplier_C,81,2263,0
+2026-08-28,Narayana Health (Bommasandra),Supplier_C,94,2169,0
+2026-08-29,Narayana Health (Bommasandra),Supplier_C,106,2063,0
+2026-08-30,Narayana Health (Bommasandra),Supplier_C,113,1950,0
+2026-08-31,Narayana Health (Bommasandra),Supplier_C,73,1877,0
+2026-09-01,Narayana Health (Bommasandra),Supplier_C,90,1787,0
+2026-09-02,Narayana Health (Bommasandra),Supplier_C,87,1700,0
+2026-09-03,Narayana Health (Bommasandra),Supplier_C,84,1616,0
+2026-09-04,Narayana Health (Bommasandra),Supplier_C,131,1485,0
+2026-09-05,Narayana Health (Bommasandra),Supplier_C,104,1381,0
+2026-09-06,Narayana Health (Bommasandra),Supplier_C,72,1309,0
+2026-09-07,Narayana Health (Bommasandra),Supplier_C,114,1195,0
+2026-09-08,Narayana Health (Bommasandra),Supplier_C,138,1057,0
+2026-09-09,Narayana Health (Bommasandra),Supplier_C,117,940,0
+2026-08-11,BGS Gleneagles (Kengeri),Supplier_C,90,2566,0
+2026-08-12,BGS Gleneagles (Kengeri),Supplier_C,78,2488,0
+2026-08-13,BGS Gleneagles (Kengeri),Supplier_C,100,2388,0
+2026-08-14,BGS Gleneagles (Kengeri),Supplier_C,145,2243,0
+2026-08-15,BGS Gleneagles (Kengeri),Supplier_C,105,2138,0
+2026-08-16,BGS Gleneagles (Kengeri),Supplier_C,86,2052,0
+2026-08-17,BGS Gleneagles (Kengeri),Supplier_C,78,1974,0
+2026-08-18,BGS Gleneagles (Kengeri),Supplier_C,103,1871,0
+2026-08-19,BGS Gleneagles (Kengeri),Supplier_C,63,1808,0
+2026-08-20,BGS Gleneagles (Kengeri),Supplier_C,78,1730,0
+2026-08-21,BGS Gleneagles (Kengeri),Supplier_C,138,1592,0
+2026-08-22,BGS Gleneagles (Kengeri),Supplier_C,134,1458,0
+2026-08-23,BGS Gleneagles (Kengeri),Supplier_C,103,1355,0
+2026-08-24,BGS Gleneagles (Kengeri),Supplier_C,96,1259,0
+2026-08-25,BGS Gleneagles (Kengeri),Supplier_C,107,1152,0
+2026-08-26,BGS Gleneagles (Kengeri),Supplier_C,155,997,0
+2026-08-27,BGS Gleneagles (Kengeri),Supplier_C,114,883,0
+2026-08-28,BGS Gleneagles (Kengeri),Supplier_C,125,758,0
+2026-08-29,BGS Gleneagles (Kengeri),Supplier_C,101,657,0
+2026-08-30,BGS Gleneagles (Kengeri),Supplier_C,107,550,0
+2026-08-31,BGS Gleneagles (Kengeri),Supplier_C,119,431,0
+2026-09-01,BGS Gleneagles (Kengeri),Supplier_C,108,323,0
+2026-09-02,BGS Gleneagles (Kengeri),Supplier_C,65,258,0
+2026-09-03,BGS Gleneagles (Kengeri),Supplier_C,133,125,0
+2026-09-04,BGS Gleneagles (Kengeri),Supplier_C,92,33,0
+2026-09-05,BGS Gleneagles (Kengeri),Supplier_C,150,0,0
+2026-09-06,BGS Gleneagles (Kengeri),Supplier_C,120,0,0
+2026-09-07,BGS Gleneagles (Kengeri),Supplier_C,107,0,0
+2026-09-08,BGS Gleneagles (Kengeri),Supplier_C,115,0,0
+2026-09-09,BGS Gleneagles (Kengeri),Supplier_C,103,0,0

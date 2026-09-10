@@ -1,0 +1,11 @@
+hospital,supplier,current_stock,projected_daily_drain,consumption_std,days_to_stockout,supplier_delayed
+Victoria Hospital,Supplier_A,1245,88.9,18.04,14,1
+Aster CMI (Hebbal),Supplier_B,2367,76.73,13.97,30,0
+Manipal Hospital (HAL),Supplier_B,0,87.92,16.57,0,0
+Apollo (Jayanagar),Supplier_A,2111,65.89,11.18,32,1
+Fortis (Bannerghatta),Supplier_C,1747,61.66,10.76,28,0
+NIMHANS,Supplier_A,401,54.88,12.0,7,1
+St. John's Medical,Supplier_A,1168,60.35,16.68,19,1
+Ramaiah Memorial,Supplier_B,1081,82.9,16.51,13,0
+Narayana Health (Bommasandra),Supplier_C,940,105.67,19.39,8,0
+BGS Gleneagles (Kengeri),Supplier_C,0,118.79,23.2,0,0
