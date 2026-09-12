@@ -4,13 +4,12 @@ import {
   PieChart, Pie, Cell 
 } from 'recharts';
 
-// Global color dictionary to sync the Pie Chart and Line Chart
 const medColors = {
-  "Amoxicillin": "#3b82f6",      // Blue
-  "Insulin": "#ec4899",          // Pink
-  "O-Negative Blood": "#ef4444", // Red
-  "Azithromycin": "#eab308",     // Yellow
-  "Propofol": "#a855f7"          // Purple
+  "Amoxicillin": { top: "#3b82f6", bottom: "#1e3a8a" },      
+  "Insulin": { top: "#ec4899", bottom: "#831843" },          
+  "O-Negative Blood": { top: "#ef4444", bottom: "#7f1d1d" }, 
+  "Azithromycin": { top: "#eab308", bottom: "#713f12" },     
+  "Propofol": { top: "#a855f7", bottom: "#4c1d95" }          
 };
 
 export default function ShortageForecastChart({ nodes = [] }) {
@@ -21,7 +20,6 @@ export default function ShortageForecastChart({ nodes = [] }) {
   
   const hospitalData = nodes.find(n => n.hospital === selectedHospital) || nodes[0];
 
-  // Data for the Multi-Line Trajectory
   const chartData = useMemo(() => {
     const transformed = [];
     const daysCount = hospitalData.inventory[medicines[0]].forecast.length;
@@ -36,7 +34,6 @@ export default function ShortageForecastChart({ nodes = [] }) {
     return transformed;
   }, [hospitalData, medicines]);
 
-  // Data for the Donut Pie Chart
   const pieData = useMemo(() => {
     return medicines.map(med => ({
       name: med,
@@ -44,21 +41,18 @@ export default function ShortageForecastChart({ nodes = [] }) {
     }));
   }, [hospitalData, medicines]);
 
-  // Calculate total for the center of the Donut
   const totalStock = pieData.reduce((sum, item) => sum + item.value, 0);
 
   return (
     <div className="w-full bg-[#020617] border border-slate-800 rounded-xl shadow-2xl overflow-hidden font-mono text-slate-200">
-      {/* Terminal Window Header Bar */}
       <div className="bg-[#0f172a] px-4 py-3 border-b border-slate-800 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
           <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
           <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-          <span className="ml-2 text-xs text-slate-400 tracking-widest uppercase">SYS.PREDICTIVE_MODELS</span>
+          <span className="ml-2 text-xs text-slate-400 tracking-widest uppercase font-bold">Predictive Models</span>
         </div>
 
-        {/* Dynamic Hospital Selector */}
         <select 
           className="bg-[#020617] border border-slate-700 text-slate-200 text-xs rounded px-3 py-1.5 focus:outline-none focus:border-emerald-500"
           value={selectedHospital}
@@ -72,7 +66,7 @@ export default function ShortageForecastChart({ nodes = [] }) {
 
       <div className="p-6 flex flex-col xl:flex-row gap-8">
         
-        {/* Left Column: Donut Pie Chart */}
+        {/* Left Column: Original 2D Donut Chart */}
         <div className="w-full xl:w-1/3 flex flex-col">
           <div className="mb-2 text-xs text-slate-400">
             <span>TARGET: <strong className="text-white">{selectedHospital}</strong></span>
@@ -88,14 +82,17 @@ export default function ShortageForecastChart({ nodes = [] }) {
                   cy="50%"
                   innerRadius={75}
                   outerRadius={105}
-                  paddingAngle={3}
+                  paddingAngle={4} 
                   dataKey="value"
-                  stroke="none"
+                  stroke="#020617" 
+                  strokeWidth={2}
+                  isAnimationActive={true}
                 >
                   {pieData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={medColors[entry.name]} />
+                    <Cell key={`cell-${index}`} fill={medColors[entry.name].top} />
                   ))}
                 </Pie>
+
                 <Tooltip 
                   contentStyle={{ backgroundColor: '#020617', borderColor: '#334155', color: '#f8fafc', fontSize: '11px', fontFamily: 'monospace' }}
                   itemStyle={{ color: '#f8fafc' }}
@@ -103,9 +100,8 @@ export default function ShortageForecastChart({ nodes = [] }) {
               </PieChart>
             </ResponsiveContainer>
             
-            {/* Center Label Overlay */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-              <span className="text-2xl font-bold text-white">{totalStock}</span>
+            <div className="absolute inset-0 mt-3 flex flex-col items-center justify-center pointer-events-none">
+              <span className="text-2xl font-bold text-white shadow-black drop-shadow-md">{totalStock}</span>
               <span className="text-[9px] text-slate-500 uppercase tracking-widest mt-1">Total Units</span>
             </div>
           </div>
@@ -128,7 +124,6 @@ export default function ShortageForecastChart({ nodes = [] }) {
                 />
                 <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '20px' }} />
                 
-                {/* Day-7 Predictive Stockout Threshold Line */}
                 <ReferenceLine y={20} stroke="#ef4444" strokeDasharray="3 3" opacity={0.5} />
                 
                 {medicines.map(med => (
@@ -136,9 +131,9 @@ export default function ShortageForecastChart({ nodes = [] }) {
                     key={med}
                     type="monotone" 
                     dataKey={med} 
-                    stroke={medColors[med] || "#10b981"} 
+                    stroke={medColors[med]?.top || "#10b981"} 
                     strokeWidth={2} 
-                    dot={{ r: 2, fill: medColors[med] || "#10b981", stroke: "#020617", strokeWidth: 1 }}
+                    dot={{ r: 2, fill: medColors[med]?.top || "#10b981", stroke: "#020617", strokeWidth: 1 }}
                     activeDot={{ r: 5 }}
                   />
                 ))}

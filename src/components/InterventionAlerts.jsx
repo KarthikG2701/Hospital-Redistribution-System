@@ -2,7 +2,6 @@ import React from 'react';
 import { Clock, ArrowRight, Terminal as TermIcon } from 'lucide-react';
 
 export default function InterventionAlerts({ routes = [], logs = [] }) {
-  // Helper to colorize log text dynamically
   const formatLog = (log) => {
     if (log.includes('SYS.ALERT') || log.includes('CRITICAL SYSTEM FAILURE')) {
       return <span className="text-red-500 font-bold animate-pulse">{log}</span>;
@@ -31,13 +30,12 @@ export default function InterventionAlerts({ routes = [], logs = [] }) {
   return (
     <div className="flex flex-col h-full bg-[#020617] border border-slate-800 rounded-xl shadow-2xl overflow-hidden font-mono text-slate-200">
       
-      {/* Terminal Header */}
       <div className="bg-[#0f172a] px-4 py-3 border-b border-slate-800 flex items-center justify-between shrink-0">
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
           <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
           <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-          <span className="ml-2 text-xs text-slate-400 tracking-widest uppercase font-bold">SYS.ROUTING_FEED</span>
+          <span className="ml-2 text-xs text-slate-400 tracking-widest uppercase font-bold">Routing Feed</span>
         </div>
         <div className="flex items-center gap-2 text-[10px] text-emerald-400 tracking-widest font-bold">
           <span className="relative flex h-2 w-2">
@@ -50,7 +48,6 @@ export default function InterventionAlerts({ routes = [], logs = [] }) {
 
       <div className="flex-1 overflow-hidden flex flex-col p-4 gap-6">
         
-        {/* Upper Half: Syntax Highlighted Execution Logs */}
         <div className="flex-1 flex flex-col overflow-hidden">
            <h3 className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2 flex items-center gap-2">
             <TermIcon className="w-3 h-3" /> Execution Terminal
@@ -69,7 +66,6 @@ export default function InterventionAlerts({ routes = [], logs = [] }) {
            </div>
         </div>
 
-        {/* Lower Half: Active Vectors (Success Routes) */}
         <div className="flex-1 flex flex-col overflow-hidden">
            <h3 className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2 flex items-center gap-2">
             <Clock className="w-3 h-3" /> Active Logistics Vectors

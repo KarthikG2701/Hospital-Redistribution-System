@@ -50,7 +50,6 @@ const DashboardLayout = ({ children, onLogout, currentDay, setCurrentDay, isPlay
       </aside>
 
       <div className="flex-1 flex flex-col h-screen overflow-hidden">
-        {/* GLOBAL SIMULATION SCRUBBER */}
         <div className="bg-[#0f172a] border-b border-slate-800 p-4 flex items-center justify-between shrink-0 shadow-md">
           <div className="flex items-center gap-3 w-1/4">
             <div className={`w-2 h-2 rounded-full ${isPlaying ? 'bg-emerald-500 animate-pulse' : 'bg-slate-600'}`}></div>
@@ -133,12 +132,11 @@ export default function App() {
             maxDays={maxDays} currentData={currentData}
           >
             <Routes>
-              {/* COMMAND CENTER */}
               <Route path="/" element={
                 <div className="space-y-6 max-w-[1600px] mx-auto h-full flex flex-col">
                   <div className="flex justify-between items-end border-b border-slate-800 pb-2">
                     <div>
-                      <h1 className="text-lg font-bold text-emerald-400 tracking-widest uppercase">SYS.EXECUTIVE_DASHBOARD</h1>
+                      <h1 className="text-lg font-bold text-emerald-400 tracking-widest uppercase">Executive Dashboard</h1>
                       <p className="text-xs text-slate-500 mt-1">Active risk factors and predictive inventory modeling.</p>
                     </div>
                   </div>
@@ -151,7 +149,7 @@ export default function App() {
                       <div className="bg-[#0f172a] px-4 py-3 border-b border-slate-800 flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <div className={`w-3 h-3 rounded-full ${criticalNodes.length > 0 ? 'bg-red-500/80 animate-pulse' : 'bg-emerald-500/80'}`}></div>
-                          <span className={`text-xs tracking-widest uppercase font-bold ${criticalNodes.length > 0 ? 'text-red-400' : 'text-emerald-400'}`}>SYS.CRITICAL_DIAGNOSTICS</span>
+                          <span className={`text-xs tracking-widest uppercase font-bold ${criticalNodes.length > 0 ? 'text-red-400' : 'text-emerald-400'}`}>Critical Diagnostics</span>
                         </div>
                         <span className="text-[10px] text-slate-500 uppercase">{criticalNodes.length} Nodes at Risk</span>
                       </div>
@@ -190,15 +188,13 @@ export default function App() {
               <Route path="/inventory" element={<div className="max-w-7xl mx-auto"><MedicineInventoryMatrix nodes={currentData.nodes} /></div>} />
               <Route path="/forecast" element={<div className="max-w-7xl mx-auto"><ShortageForecastChart nodes={currentData.nodes} /></div>} />
               
-              {/* FULL TOPOLOGY MAP (Fixed Layout and Leaflet Heights) */}
               <Route path="/logistics" element={
                 <div className="max-w-[1600px] mx-auto flex flex-col">
                   <div className="mb-4 border-b border-slate-800 pb-2 shrink-0">
-                    <h1 className="text-lg font-bold text-emerald-400 tracking-widest uppercase">SYS.TOPOLOGY_AND_ROUTING</h1>
+                    <h1 className="text-lg font-bold text-emerald-400 tracking-widest uppercase">Topology & Routing</h1>
                     <p className="text-xs text-slate-500 mt-1">Live spatial visualization and execution logs.</p>
                   </div>
                   
-                  {/* Changed to lg:grid-cols-3 and assigned explicit hard heights */}
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 pb-6">
                     <div className="lg:col-span-2 h-[500px] lg:h-[750px]">
                       <RedistributionMap nodes={currentData.nodes} routes={currentData.routes} />
