@@ -30,7 +30,8 @@ Strict Cold-Chain Validation: Autonomously validates or rejects emergency delive
 
 "Time Engine" Scrubber: A custom global state controller that iterates through the backend's stateful JSON array, driving synchronized animations across the map, routing terminal, and forecast charts.
 
-🚀 How to Run the Project
+🚀 How to Run the Project:
+
 Prerequisites
 Ensure you have the following installed on your system:
 
